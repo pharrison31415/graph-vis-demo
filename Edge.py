@@ -10,8 +10,8 @@ class Edge:
         v2.edges.add(self)
 
     def get_relative(self, vertex):
-        if vertex == v1:
-            return v2
-        if vertex == v2:
-            return v1
+        if vertex == self.v1:
+            return self.v2
+        if vertex == self.v2:
+            return self.v1
         return None
