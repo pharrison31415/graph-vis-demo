@@ -4,13 +4,7 @@ import sys
 from Vertex import Vertex
 from Edge import Edge
 
-
-def gravity(r): return -1/(r**2)
-def repel(r): return 1/(r**3)
-
-
-# WIDTH, HEIGHT = 1200, 600
-WIDTH, HEIGHT = 600, 600
+WIDTH, HEIGHT = 1200, 600
 
 
 def main():
@@ -26,11 +20,15 @@ def main():
     a = Vertex()
     b = Vertex()
     c = Vertex()
-    vertices = [a, b, c]
+    d = Vertex()
+    vertices = [a, b, c, d]
 
     ab = Edge(a, b)
     ac = Edge(a, c)
-    edges = [ab, ac]
+    ad = Edge(a, d)
+    bc = Edge(b, c)
+    cd = Edge(c, d)
+    edges = [ab, ac, ad, bc, cd]
 
     while True:
         screen.fill((0, 0, 0))
@@ -39,18 +37,17 @@ def main():
             if event.type == pygame.QUIT or (event.type == pygame.KEYUP and event.key == pygame.K_ESCAPE):
                 sys.exit()
             elif event.type == pygame.KEYUP and event.key == pygame.K_SPACE:
-                print([(v.ax, v.ay) for v in vertices])
+                print([(v.ddx, v.ddy) for v in vertices])
 
         # update vertex accelerations
         for v1 in vertices:
-            v1.ax, v1.ay = 0, 0
             for v2 in vertices:
                 if v1 == v2:
                     continue
 
                 repel_x, repel_y = v1.repel(v2)
-                v1.ax += repel_x
-                v2.ay += repel_y
+                v1.ddx += repel_x
+                v2.ddy += repel_y
 
         # update vertex positions and draw
         for vertex in vertices:
