@@ -15,21 +15,25 @@ def main():
 
     Vertex.WIDTH = WIDTH
     Vertex.HEIGHT = HEIGHT
-    Vertex.TEMP = 1
+    Vertex.TEMP = 2
 
     a = Vertex()
     b = Vertex()
     c = Vertex()
     d = Vertex()
-    vertices = [a, b, c, d]
+    e = Vertex()
+    vertices = [a, b, c, d, e]
 
     ab = Edge(a, b)
     ac = Edge(a, c)
     ad = Edge(a, d)
+    ae = Edge(a, e)
     bc = Edge(b, c)
+    bd = Edge(b, d)
     cd = Edge(c, d)
-    edges = [ab, ac, ad, bc, cd]
+    edges = [ab, ac, ad, ae, bc, bd, cd]
 
+    paused = False
     while True:
         screen.fill((0, 0, 0))
 
@@ -37,21 +41,24 @@ def main():
             if event.type == pygame.QUIT or (event.type == pygame.KEYUP and event.key == pygame.K_ESCAPE):
                 sys.exit()
             elif event.type == pygame.KEYUP and event.key == pygame.K_SPACE:
-                print([(v.ddx, v.ddy) for v in vertices])
+                paused = not paused
 
         # update vertex accelerations
-        for v1 in vertices:
-            for v2 in vertices:
-                if v1 == v2:
-                    continue
+        if not paused:
+            for v1 in vertices:
+                for v2 in vertices:
+                    if v1 == v2:
+                        continue
 
-                repel_x, repel_y = v1.repel(v2)
-                v1.ddx += repel_x
-                v2.ddy += repel_y
+                    repel_x, repel_y = v1.repel(v2)
+                    spring_x, spring_y = v1.spring(v2)
+                    v1.ddx += repel_x + spring_x
+                    v2.ddy += repel_y + spring_y
 
         # update vertex positions and draw
         for vertex in vertices:
-            vertex.update_pos()
+            if not paused:
+                vertex.update_pos()
             pygame.draw.circle(surface, (255, 255, 255),
                                (vertex.x, vertex.y), vertex.radius)
 

@@ -6,7 +6,9 @@ class Vertex:
     WIDTH, HEIGHT = 1200, 600
     MAX_VEL = 0.5
     TEMP = 0
-    REPEL = 1
+    SPRING = -1
+    SPRING_LEN = 100
+    REPEL = 0.001
 
     def __init__(self):
         self.x = uniform(0, Vertex.WIDTH)
@@ -22,6 +24,18 @@ class Vertex:
 
         self.edges = set()
 
+    def spring(self, vertex):
+        # if vertices are not adjacent, no spring
+        if vertex not in [edge.get_relative(self) for edge in self.edges]:
+            return [0, 0]
+
+        delta_x = self.x - vertex.x
+        delta_y = self.y - vertex.y
+
+        dist = sqrt(delta_x**2 + delta_y**2)
+        magnitude = Vertex.SPRING * (dist - Vertex.SPRING_LEN)
+        return [magnitude * delta_x/dist, -magnitude * delta_y/dist]
+
     def repel(self, vertex):
         delta_x = self.x - vertex.x
         delta_y = self.y - vertex.y
@@ -31,7 +45,7 @@ class Vertex:
             return (0, 0)
 
         dist = sqrt(delta_x**2 + delta_y**2)
-        magnitude = Vertex.REPEL * self.m * vertex.m / dist**2
+        magnitude = Vertex.REPEL / dist**2
 
         return [magnitude * delta_x/dist, -magnitude * delta_y/dist]
 
