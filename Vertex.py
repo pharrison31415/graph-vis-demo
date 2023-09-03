@@ -7,7 +7,7 @@ class Vertex:
     MAX_VEL = 1
     TEMP = 0
     SPRING = -1
-    SPRING_LEN = 100
+    SPRING_LEN = 70
     REPEL = 1
 
     def __init__(self):
