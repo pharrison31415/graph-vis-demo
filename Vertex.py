@@ -4,7 +4,7 @@ from math import sqrt
 
 class Vertex:
     WIDTH, HEIGHT = 600, 600
-    MAX_VEL = 0.5
+    MAX_VEL = 1
     TEMP = 0
     SPRING = -1
     SPRING_LEN = 100

@@ -15,7 +15,7 @@ def main():
 
     Vertex.WIDTH = WIDTH
     Vertex.HEIGHT = HEIGHT
-    Vertex.TEMP = 1
+    Vertex.TEMP = 1000
 
     a = Vertex()
     b = Vertex()
