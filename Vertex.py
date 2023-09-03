@@ -3,12 +3,12 @@ from math import sqrt
 
 
 class Vertex:
-    WIDTH, HEIGHT = 1200, 600
+    WIDTH, HEIGHT = 600, 600
     MAX_VEL = 0.5
     TEMP = 0
     SPRING = -1
     SPRING_LEN = 100
-    REPEL = 0.001
+    REPEL = 1
 
     def __init__(self):
         self.x = uniform(0, Vertex.WIDTH)
@@ -32,6 +32,10 @@ class Vertex:
         delta_x = self.x - vertex.x
         delta_y = self.y - vertex.y
 
+        # divibe by zero
+        if (delta_x, delta_y) == (0, 0):
+            return (0, 0)
+
         dist = sqrt(delta_x**2 + delta_y**2)
         magnitude = Vertex.SPRING * (dist - Vertex.SPRING_LEN)
         return [magnitude * delta_x/dist, -magnitude * delta_y/dist]
@@ -51,8 +55,8 @@ class Vertex:
 
     def update_pos(self, dt=1):
         # update velocity
-        self.dx += self.ddx*dt
-        self.dy += self.ddy*dt
+        self.dx += self.ddx*dt + uniform(-Vertex.TEMP, Vertex.TEMP)
+        self.dy += self.ddy*dt + uniform(-Vertex.TEMP, Vertex.TEMP)
 
         # modify velocity
         if self.dx > Vertex.MAX_VEL:
@@ -69,8 +73,8 @@ class Vertex:
             self.ddy = 0
 
         # update position
-        self.x += self.dx*dt + uniform(-Vertex.TEMP, Vertex.TEMP)
-        self.y += self.dy*dt + uniform(-Vertex.TEMP, Vertex.TEMP)
+        self.x += self.dx*dt
+        self.y += self.dy*dt
 
         # modify position
         if self.x < self.radius:

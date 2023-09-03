@@ -4,7 +4,7 @@ import sys
 from Vertex import Vertex
 from Edge import Edge
 
-WIDTH, HEIGHT = 1200, 600
+WIDTH, HEIGHT = 600, 600
 
 
 def main():
@@ -15,23 +15,20 @@ def main():
 
     Vertex.WIDTH = WIDTH
     Vertex.HEIGHT = HEIGHT
-    Vertex.TEMP = 2
+    Vertex.TEMP = 1
 
     a = Vertex()
     b = Vertex()
     c = Vertex()
     d = Vertex()
-    e = Vertex()
-    vertices = [a, b, c, d, e]
+    vertices = [a, b, c, d]
 
     ab = Edge(a, b)
     ac = Edge(a, c)
-    ad = Edge(a, d)
-    ae = Edge(a, e)
     bc = Edge(b, c)
     bd = Edge(b, d)
     cd = Edge(c, d)
-    edges = [ab, ac, ad, ae, bc, bd, cd]
+    edges = [ab, ac, bc, bd, cd]
 
     paused = False
     while True:
