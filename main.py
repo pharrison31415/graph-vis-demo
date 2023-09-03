@@ -9,7 +9,8 @@ def gravity(r): return -1/(r**2)
 def repel(r): return 1/(r**3)
 
 
-WIDTH, HEIGHT = 1200, 600
+# WIDTH, HEIGHT = 1200, 600
+WIDTH, HEIGHT = 600, 600
 
 
 def main():
@@ -37,18 +38,19 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT or (event.type == pygame.KEYUP and event.key == pygame.K_ESCAPE):
                 sys.exit()
+            elif event.type == pygame.KEYUP and event.key == pygame.K_SPACE:
+                print([(v.ax, v.ay) for v in vertices])
 
         # update vertex accelerations
         for v1 in vertices:
-            v1.ax = 0
-            v1.ay = 0
+            v1.ax, v1.ay = 0, 0
             for v2 in vertices:
                 if v1 == v2:
                     continue
 
-                grav = v1.gravity(v2)
-                v1.ax += grav[0]
-                v2.ay += grav[1]
+                repel_x, repel_y = v1.repel(v2)
+                v1.ax += repel_x
+                v2.ay += repel_y
 
         # update vertex positions and draw
         for vertex in vertices:

@@ -5,7 +5,7 @@ from math import sqrt
 class Vertex:
     WIDTH, HEIGHT = 1200, 600
     TEMP = 0
-    GRAV = -1
+    REPEL = 1
 
     def __init__(self):
         self.x = uniform(0, Vertex.WIDTH)
@@ -21,7 +21,7 @@ class Vertex:
 
         self.edges = set()
 
-    def gravity(self, vertex):
+    def repel(self, vertex):
         delta_x = self.x - vertex.x
         delta_y = self.y - vertex.y
 
@@ -30,7 +30,7 @@ class Vertex:
             return (0, 0)
 
         dist = sqrt(delta_x**2 + delta_y**2)
-        magnitude = Vertex.GRAV * self.m * vertex.m / dist**2
+        magnitude = Vertex.REPEL * self.m * vertex.m / dist**2
 
         return [magnitude * delta_x/dist, -magnitude * delta_y/dist]
 
