@@ -15,7 +15,6 @@ def main():
 
     Vertex.WIDTH = WIDTH
     Vertex.HEIGHT = HEIGHT
-    Vertex.TEMP = 1000
 
     # a = Vertex()
     # b = Vertex()
@@ -60,6 +59,8 @@ def main():
         # update vertex accelerations
         if not paused:
             for v1 in vertices.values():
+                v1.ddx = 0
+                v1.ddy = 0
                 for v2 in vertices.values():
                     if v1 == v2:
                         continue

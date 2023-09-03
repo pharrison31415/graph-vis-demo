@@ -4,11 +4,11 @@ from math import sqrt
 
 class Vertex:
     WIDTH, HEIGHT = 600, 600
-    MAX_VEL = 1
+    MAX_VEL = 0.05
     TEMP = 0
-    SPRING = -1
-    SPRING_LEN = 70
-    REPEL = 1
+    SPRING = -10**-6
+    SPRING_LEN = 100
+    REPEL = 0.1
 
     def __init__(self, uid):
         self.uid = uid
@@ -27,6 +27,7 @@ class Vertex:
         self.edges = set()
 
     def spring(self, vertex):
+        # return (0, 0)
         # if vertices are not adjacent, no spring
         if vertex not in [edge.get_relative(self) for edge in self.edges]:
             return [0, 0]
@@ -43,6 +44,7 @@ class Vertex:
         return [magnitude * delta_x/dist, magnitude * delta_y/dist]
 
     def repel(self, vertex):
+        # return (0, 0)
         delta_x = self.x - vertex.x
         delta_y = self.y - vertex.y
 
@@ -57,8 +59,8 @@ class Vertex:
 
     def update_pos(self, dt=1):
         # update velocity
-        self.dx += self.ddx*dt + uniform(-Vertex.TEMP, Vertex.TEMP)
-        self.dy += self.ddy*dt + uniform(-Vertex.TEMP, Vertex.TEMP)
+        self.dx += self.ddx*dt
+        self.dy += self.ddy*dt
 
         # modify velocity
         if self.dx > Vertex.MAX_VEL:
@@ -75,8 +77,8 @@ class Vertex:
             self.ddy = 0
 
         # update position
-        self.x += self.dx*dt
-        self.y += self.dy*dt
+        self.x += self.dx*dt + uniform(-Vertex.TEMP, Vertex.TEMP)
+        self.y += self.dy*dt + uniform(-Vertex.TEMP, Vertex.TEMP)
 
         # modify position
         if self.x < self.radius:
