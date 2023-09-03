@@ -2,9 +2,9 @@
 
 ## Run
 
-Run ` main.py`` with one system argument, the path to a graph data file.
+Run ` main.py` with one system argument, the path to a graph data file.
 eg:
- `$ python main.py data1.txt`
+`$ python main.py data1.txt`
 
 ## Graph Data Grammar
 
