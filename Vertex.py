@@ -10,7 +10,9 @@ class Vertex:
     SPRING_LEN = 70
     REPEL = 1
 
-    def __init__(self):
+    def __init__(self, uid):
+        self.uid = uid
+
         self.x = uniform(0, Vertex.WIDTH)
         self.y = uniform(0, Vertex.HEIGHT)
         self.dx = 0

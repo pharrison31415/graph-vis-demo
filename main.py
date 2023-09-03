@@ -17,18 +17,35 @@ def main():
     Vertex.HEIGHT = HEIGHT
     Vertex.TEMP = 1000
 
-    a = Vertex()
-    b = Vertex()
-    c = Vertex()
-    d = Vertex()
-    vertices = [a, b, c, d]
+    # a = Vertex()
+    # b = Vertex()
+    # c = Vertex()
+    # d = Vertex()
+    # vertices = [a, b, c, d]
 
-    ab = Edge(a, b)
-    ac = Edge(a, c)
-    bc = Edge(b, c)
-    bd = Edge(b, d)
-    cd = Edge(c, d)
-    edges = [ab, ac, bc, bd, cd]
+    # ab = Edge(a, b)
+    # ac = Edge(a, c)
+    # bc = Edge(b, c)
+    # bd = Edge(b, d)
+    # cd = Edge(c, d)
+    # edges = [ab, ac, bc, bd, cd]
+
+    vertices = {}
+    edges = set()
+
+    with open(sys.argv[1]) as data:
+        for line in data:
+            uid = line.strip()
+            if uid == "":
+                break
+            new_vert = Vertex(uid)
+            vertices[uid] = new_vert
+
+        for line in data:
+            uid1, uid2 = line.strip().split(" ")
+            v1, v2 = vertices[uid1], vertices[uid2]
+            new_edge = Edge(v1, v2)
+            edges.add(new_edge)
 
     paused = False
     while True:
@@ -42,8 +59,8 @@ def main():
 
         # update vertex accelerations
         if not paused:
-            for v1 in vertices:
-                for v2 in vertices:
+            for v1 in vertices.values():
+                for v2 in vertices.values():
                     if v1 == v2:
                         continue
 
@@ -53,7 +70,7 @@ def main():
                     v2.ddy += repel_y + spring_y
 
         # update vertex positions and draw
-        for vertex in vertices:
+        for vertex in vertices.values():
             if not paused:
                 vertex.update_pos()
             pygame.draw.circle(surface, (255, 255, 255),
