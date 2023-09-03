@@ -40,7 +40,7 @@ class Vertex:
 
         dist = sqrt(delta_x**2 + delta_y**2)
         magnitude = Vertex.SPRING * (dist - Vertex.SPRING_LEN)
-        return [magnitude * delta_x/dist, -magnitude * delta_y/dist]
+        return [magnitude * delta_x/dist, magnitude * delta_y/dist]
 
     def repel(self, vertex):
         delta_x = self.x - vertex.x
@@ -53,7 +53,7 @@ class Vertex:
         dist = sqrt(delta_x**2 + delta_y**2)
         magnitude = Vertex.REPEL / dist**2
 
-        return [magnitude * delta_x/dist, -magnitude * delta_y/dist]
+        return [magnitude * delta_x/dist, magnitude * delta_y/dist]
 
     def update_pos(self, dt=1):
         # update velocity

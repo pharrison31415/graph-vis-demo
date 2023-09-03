@@ -67,7 +67,7 @@ def main():
                     repel_x, repel_y = v1.repel(v2)
                     spring_x, spring_y = v1.spring(v2)
                     v1.ddx += repel_x + spring_x
-                    v2.ddy += repel_y + spring_y
+                    v1.ddy += repel_y + spring_y
 
         # update vertex positions and draw
         for vertex in vertices.values():
