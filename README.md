@@ -1,5 +1,11 @@
 # graph-vis-demo
 
+## Objective
+
+This program is a proof of concept of a potentially bigger project for graph visualization.
+
+Lots of types of data can be represented as graphs: social media following "maps", webpage linking, etc. This program aims to display graph information such that physical proximity helps indicate graphical adjacency to better visualize the data.
+
 ## Run
 
 Run `main.py` with one system argument, the path to a graph data file.
