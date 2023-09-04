@@ -9,7 +9,7 @@ def crawl(origin, depth, vertices, edges, chance):
     if depth == 0:
         return
 
-    response = requests.get(f"https://en.wikipedia.org/wiki/{origin}")
+    response = requests.get(f"https://simple.wikipedia.org/wiki/{origin}")
     soup = BeautifulSoup(response.content, features="html.parser")
 
     for a in soup.find_all("a"):
@@ -26,7 +26,7 @@ def crawl(origin, depth, vertices, edges, chance):
 
 def main():
     origin = sys.argv[1]
-    depth = 2
+    depth = 1
 
     vertices = {origin}
     edges = set()
