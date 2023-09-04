@@ -57,17 +57,20 @@ def main():
                     v1.ddx += repel_x + spring_x
                     v1.ddy += repel_y + spring_y
 
-        # update vertex positions and draw
+        # update vertex positions
         for vertex in vertices.values():
             if not paused:
                 vertex.update_pos()
-            pygame.draw.circle(surface, (255, 255, 255),
-                               (vertex.x, vertex.y), vertex.radius)
 
         # draw edges
         for edge in edges:
             pygame.draw.line(surface, (255, 255, 255),
                              (edge.v1.x, edge.v1.y), (edge.v2.x, edge.v2.y))
+
+        # draw vertices
+        for vertex in vertices.values():
+            pygame.draw.circle(surface, (255, 0, 0),
+                               (vertex.x, vertex.y), vertex.radius)
 
         pygame.display.update()
 

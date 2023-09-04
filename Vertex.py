@@ -22,14 +22,14 @@ class Vertex:
 
         self.m = 1
 
-        self.radius = 6
+        self.radius = 2
 
         self.edges = set()
 
     def spring(self, vertex):
         # return (0, 0)
         # if vertices are not adjacent, no spring
-        if vertex not in [edge.get_relative(self) for edge in self.edges]:
+        if vertex not in self.edges:
             return [0, 0]
 
         delta_x = self.x - vertex.x
