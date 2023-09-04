@@ -4,7 +4,7 @@ import sys
 from Vertex import Vertex
 from Edge import Edge
 
-WIDTH, HEIGHT = 600, 600
+WIDTH, HEIGHT = 800, 800
 
 
 def main():
