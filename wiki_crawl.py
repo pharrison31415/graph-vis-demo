@@ -33,6 +33,7 @@ def main():
 
     crawl(origin, depth, vertices, edges, 1)
 
+    # trim out vertices with one edge
     # vertices_to_remove = set()
     # for vertex in vertices:
     #     edge_count = 0
