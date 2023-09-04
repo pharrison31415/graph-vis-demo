@@ -16,19 +16,6 @@ def main():
     Vertex.WIDTH = WIDTH
     Vertex.HEIGHT = HEIGHT
 
-    # a = Vertex()
-    # b = Vertex()
-    # c = Vertex()
-    # d = Vertex()
-    # vertices = [a, b, c, d]
-
-    # ab = Edge(a, b)
-    # ac = Edge(a, c)
-    # bc = Edge(b, c)
-    # bd = Edge(b, d)
-    # cd = Edge(c, d)
-    # edges = [ab, ac, bc, bd, cd]
-
     vertices = {}
     edges = set()
 
