@@ -4,7 +4,7 @@
 
 Run `main.py` with one system argument, the path to a graph data file.
 eg:
-`$ python main.py data1.txt`
+`$ python main.py data/big.txt`. Toggle animation pause with the spacebar.
 
 ## Graph Data Grammar
 
