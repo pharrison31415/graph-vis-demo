@@ -1,0 +1,90 @@
+Caribbean
+Natural_resource
+Water
+Gulf_of_Mexico
+North_America
+Tropics
+Tourist
+Cuba
+Hispaniola
+Ocean
+Tropical_climate
+Central_America
+Southeast
+South_America
+Region
+Christopher_Columbus
+Island
+Atlantic_Ocean
+Sea
+Puerto_Rico
+
+Gulf_of_Mexico Hispaniola
+Hispaniola Southeast
+Tropics Tropical_climate
+Island Sea
+Hispaniola Gulf_of_Mexico
+Central_America North_America
+Caribbean Gulf_of_Mexico
+Ocean Atlantic_Ocean
+Christopher_Columbus Cuba
+Gulf_of_Mexico Caribbean
+Gulf_of_Mexico Central_America
+Hispaniola Island
+Hispaniola North_America
+Cuba North_America
+Water Ocean
+Central_America Region
+Atlantic_Ocean South_America
+Gulf_of_Mexico Atlantic_Ocean
+Atlantic_Ocean Puerto_Rico
+Puerto_Rico Caribbean
+Christopher_Columbus Atlantic_Ocean
+Caribbean Island
+Sea Ocean
+Hispaniola Central_America
+North_America Puerto_Rico
+Caribbean Puerto_Rico
+Tourist North_America
+Caribbean Region
+Caribbean Central_America
+North_America Central_America
+Hispaniola South_America
+Hispaniola Atlantic_Ocean
+Puerto_Rico Christopher_Columbus
+Water Sea
+North_America Cuba
+Cuba Caribbean
+Natural_resource Water
+Hispaniola Caribbean
+Cuba Island
+North_America Atlantic_Ocean
+Caribbean North_America
+Puerto_Rico Cuba
+Hispaniola Cuba
+North_America Caribbean
+Caribbean Atlantic_Ocean
+Hispaniola Puerto_Rico
+Hispaniola Christopher_Columbus
+Central_America South_America
+Central_America Gulf_of_Mexico
+South_America Central_America
+Tropical_climate Tropics
+Caribbean Hispaniola
+Cuba Christopher_Columbus
+Cuba Puerto_Rico
+South_America North_America
+Christopher_Columbus Hispaniola
+Gulf_of_Mexico North_America
+Christopher_Columbus Puerto_Rico
+North_America South_America
+Gulf_of_Mexico Cuba
+Ocean Sea
+Island Ocean
+Hispaniola Tropical_climate
+Puerto_Rico Island
+Puerto_Rico North_America
+Christopher_Columbus South_America
+Caribbean South_America
+Atlantic_Ocean Ocean
+Caribbean Cuba

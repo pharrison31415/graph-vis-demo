@@ -1,0 +1,164 @@
+Graphite
+Staircase
+Fence
+Lignin
+Wood_fibre
+Uganda
+Paper
+Glue
+Lead
+Plywood
+Walnut
+Cellulose
+Maple
+Door
+Pencil
+Building
+Softwood
+Rosewood
+ISBN_(identifier)
+Xylem
+Screw
+Flowering_plants
+Paper_mill
+Renewable_resource
+Tree
+Nail
+Paint
+Art
+Carpenter
+Beech
+Furniture
+Petrified_wood
+Factory
+House
+Wax
+Pine
+Birch
+Ebony
+Lumber
+Grinling_Gibbons
+Hardwood
+Oak
+Transparent
+Firewood
+Frame
+Varnish
+Lumberjack
+Clay
+Conifers
+Sculpture
+
+Cellulose ISBN_(identifier)
+Tree Birch
+Pencil Wax
+Tree Maple
+Paint ISBN_(identifier)
+Paper Paper_mill
+Carpenter House
+Lignin Oak
+Conifers ISBN_(identifier)
+Birch Hardwood
+Art Sculpture
+Walnut Furniture
+Paper Clay
+Pencil ISBN_(identifier)
+Hardwood ISBN_(identifier)
+Wood_fibre Xylem
+Door House
+Graphite Lead
+Lumberjack Tree
+Hardwood Xylem
+Building Door
+Hardwood Beech
+Transparent Paper
+Graphite Pencil
+Maple Furniture
+Pencil Glue
+Pencil Paper
+Building Staircase
+Oak Furniture
+Oak Softwood
+Hardwood Oak
+Conifers Paper
+Plywood Glue
+Grinling_Gibbons ISBN_(identifier)
+Glue Paper
+Oak Pine
+Screw Nail
+Conifers Tree
+Tree Oak
+Plywood Birch
+Pencil Paint
+House Lead
+Pencil Lead
+Varnish ISBN_(identifier)
+Wood_fibre Paper
+Paper Pencil
+Hardwood Lumber
+Clay ISBN_(identifier)
+Tree Pine
+Art ISBN_(identifier)
+Pencil Varnish
+Lignin Conifers
+Flowering_plants Oak
+Paper Glue
+Paper_mill Paper
+Ebony Tree
+Softwood Lumber
+Door Building
+Paper ISBN_(identifier)
+Varnish Wax
+Paper Wax
+Conifers Softwood
+Hardwood Maple
+Paper_mill Factory
+Tree ISBN_(identifier)
+Tree Renewable_resource
+Conifers Pine
+Glue Art
+Beech ISBN_(identifier)
+Lignin Xylem
+Wood_fibre Cellulose
+House ISBN_(identifier)
+Firewood Renewable_resource
+Lignin Softwood
+Tree Beech
+Paper Cellulose
+Building House
+Glue Tree
+Hardwood Birch
+Glue Building
+Lignin Hardwood
+Flowering_plants Pine
+Carpenter Furniture
+Hardwood Tree
+Hardwood Furniture
+Lumberjack Lumber
+Tree Conifers
+Softwood Hardwood
+Pine Tree
+Lumber Building
+Oak ISBN_(identifier)
+Oak Hardwood
+Hardwood Lignin
+Tree Xylem
+Building Factory
+Cellulose Paper
+Grinling_Gibbons Furniture
+Graphite Clay
+Maple Tree
+Paper_mill Wood_fibre
+Birch Tree
+Paint Building
+Pencil Clay
+Hardwood Softwood
+Paint Clay
+Oak Tree
+Nail ISBN_(identifier)
+Paint House
+Sculpture Art
+Furniture Screw
+Paper Wood_fibre
+Pencil Graphite
+Hardwood Walnut
