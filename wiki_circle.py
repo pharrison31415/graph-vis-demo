@@ -6,8 +6,8 @@ from urllib.parse import urlparse
 
 
 def wiki_links_from(page):
-    # response = requests.get(f"https://simple.wikipedia.org/wiki/{page}")
-    response = requests.get(f"https://en.wikipedia.org/wiki/{page}")
+    response = requests.get(f"https://simple.wikipedia.org/wiki/{page}")
+    # response = requests.get(f"https://en.wikipedia.org/wiki/{page}")
     soup = BeautifulSoup(response.content, features="html.parser")
 
     return soup.find_all("a")
