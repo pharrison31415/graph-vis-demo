@@ -60,6 +60,7 @@ def main():
         # update vertex positions
         for vertex in vertices.values():
             if not paused:
+                # vertex.update_pos(dt=50)
                 vertex.update_pos()
 
         # draw edges
